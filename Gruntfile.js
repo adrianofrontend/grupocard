@@ -20,8 +20,7 @@ module.exports = function (grunt) {
             }
         },
 
-
-        //wacth the files that the project is using according the paths set
+        //watch the files that the project is using according to the paths set
         watch: {
             livereload: {
                 options: {
@@ -99,7 +98,6 @@ module.exports = function (grunt) {
             }
         },
 
-
         assemble: {
             options: {
                 assets: '<%= settings.src %>/assets',
@@ -123,14 +121,13 @@ module.exports = function (grunt) {
                 options: {
                     sitePath: "<%= domains.dev.mask %>",
                     subdomain: "<%= domains.dev.main %>",
-
                 },
                 files: {
                     './': ["<%= settings.src %>/templates/pages/**/*.hbs"]
                 }
             }
         },
-        // if you want to copy any file from dev enviroment to production <%= settings.dist %> set here
+
         copy: {
             assets: {
                 expand: true,
@@ -164,22 +161,21 @@ module.exports = function (grunt) {
             }
         },
 
-        htmlmin: { // Task
-            dist: { // Target
-                options: { // Target options
+        htmlmin: {
+            dist: {
+                options: {
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files: { // Dictionary of files - 'destination': 'source'
+                files: {
                     '<%= settings.dist %>/index.html': '<%= settings.src %>/templates/pages/index.html',
-
                 }
             },
         },
 
-        sass: { // Task
-            dist: { // Target
-                files: { // Transform sass to css - 'destination': 'source'
+        sass: {
+            dist: {
+                files: {
                     '<%= settings.dist %>/assets/css/style.css': '<%= settings.src %>/assets/sass/style.scss'
                 }
             }
@@ -200,9 +196,9 @@ module.exports = function (grunt) {
             }
         },
 
-        cssmin: { // Task
-            dist: { // Target
-                files: { // Minify css - 'destination': 'source'
+        cssmin: {
+            dist: {
+                files: {
                     '<%= settings.dist %>/assets/css/style.min.css': '<%= settings.dist %>/assets/css/style.css'
                 }
             },
@@ -218,59 +214,27 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    // Load the required plugins
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-assemble');
+    grunt.loadNpmTasks('grunt-image');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    // define default task
-    grunt.registerTask('default', ['browserSync', 'watch']);
-
-    //loading tasks from NPM modules installed on this project
+    // Load other NPM tasks
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask('assets', [
-        'copy',
-        'htmlmin',
-        'sass',
-        'cssmin',
-        `uglify`
-    ]);
-
-    grunt.registerTask('load', [
-        'connect:livereload',
-        'watch'
-    ]);
-
-    grunt.registerTask('build:local', [
-        'assemble:localhost',
-        'assets'
-    ]);
-
-    grunt.registerTask('build:dev', [
-        'assemble:develop',
-        'image',
-        'assets'
-    ]);
-
-    grunt.registerTask('build:hml', [
-        'assemble:homolog',
-        'assets'
-    ]);
-
-    grunt.registerTask('build:prod', [
-        'assemble:production',
-        'image',
-        'assets'
-    ]);
-
-    grunt.registerTask('dev', [
-        'build:local',
-        'load',
-    ]);
-
-    grunt.registerTask('imagemin', [
-        'image',
-    ]);
-
+    // Define tasks
+    grunt.registerTask('default', ['browserSync', 'watch']);
+    grunt.registerTask('assets', ['copy', 'htmlmin', 'sass', 'cssmin', 'uglify']);
+    grunt.registerTask('load', ['connect:livereload', 'watch']);
+    grunt.registerTask('build:local', ['assemble:localhost', 'assets']);
+    grunt.registerTask('build:dev', ['assemble:develop', 'image', 'assets']);
+    grunt.registerTask('build:hml', ['assemble:homolog', 'assets']);
+    grunt.registerTask('build:prod', ['assemble:production', 'image', 'assets']);
+    grunt.registerTask('dev', ['build:local', 'load']);
+    grunt.registerTask('imagemin', ['image']);
 };
