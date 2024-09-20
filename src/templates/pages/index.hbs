@@ -1,0 +1,233 @@
+---
+htmlCanonical: https://www.grupocard.com.br/
+bodyClass: "bg-white"
+htmlTitle: "Card, levando +fluxo para o seu negócio"
+htmlDescription: ""
+layout: "html-base-template.hbs"
+---
+
+
+<section class="bg-hero">
+    <div class="d-block d-xl-none">
+        <div class="container h-100">
+             <div class="content-logo">
+                <a href="/">
+                <img class="img-fluid img-logo" src="/assets/logos/logo-card-white.svg" alt="Cotai Empreendimentos">
+                </a>
+            </div>
+            <div class="d-flex h-100 align-items-center flex-wrap flex-md-nowrap">
+                <div class="col-md-8 text-md-left" data-aos="fade-down">
+                    <div class="content">
+                        <h1 class="main-title-mobile">O melhor meio de pagamento para você <span>vender online</span>
+                        </h1>
+                        <p>Na Card, você começa a vender na internet com alta conversão <br> e a segurança que você
+                            precisa para crescer o seu negócio.</p>
+                        <a href="#budget" class="main-button btn-orange" title="Aumente suas vendas">Aumente suas
+                            vendas</a>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-none d-xl-block h-100">
+        <div class="container p-0 h-50">
+            <div class="content-logo">
+                <a href="/">
+                <img class="img-fluid img-logo" src="/assets/logos/logo-card-white.svg" alt="Cotai Empreendimentos">
+                </a>
+            </div>
+
+            <div class="d-flex h-100 align-items-center flex-wrap flex-md-nowrap">
+                <div class="col-md-8" data-aos="fade-down">
+                    <div class="content">
+                        <h1 class="main-title-desktop">O melhor meio de pagamento para você <span>vender online</span>
+                        </h1>
+                        <p>Na Card, você começa a vender na internet com alta conversão <br> e a segurança que você
+                            precisa para crescer o seu negócio.</p>
+                        <a href="#budget" class="main-button btn-orange" title="Aumente suas vendas">Aumente suas
+                            vendas</a>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="main-slider-partners section-padding overflow-hidden bg-gray-002" id="partners">
+    <div class="col-md-12 text-center" data-aos="fade-down">
+
+        <h1 class="main-title-mobile main-title-desktop">Alguns de nossos clientes</h1>
+        <div class="line-title bg-line-orange"></div>
+    </div>
+
+    <div class="swiper-container container swiper-container-partners">
+        <div class="swiper-wrapper">
+            {{#home}}{{#each partners-items}}
+            <div class="swiper-slide">
+                <div class="swiper-slide-partner">
+                    <img src="/assets/images/partners/{{{imagem}}}" alt="{{{alt}}}">
+                </div>
+            </div>
+            {{/each}}{{/home}}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+<section class="graphic section-padding overflow-hidden bg-white" id="why-do">
+    <div class="container pl-0 pr-0">
+        <div class="d-flex align-items-center flex-wrap flex-md-nowrap">
+            <div class="col-md-6" data-aos="fade-right">
+                <img class="img-fluid" src="/assets/images/graphic.png" alt="">
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="line-title bg-line-orange"></div>
+                <div class="content">
+                    <h2 class="main-title-mobile main-title-desktop">Receba pagamentos e gerencie as suas vendas em um
+                        só
+                        lugar.</h2>
+                    <p>Aumente as suas vendas oferecendo, no seu site ou app, a melhor experiência para pagamentos por
+                        cartão de
+                        crédito e boleto bancário.</p>
+
+                    <p>Fazemos toda a comunicação com as bandeiras, bancos e demais serviços no meio do caminho e você
+                        ainda
+                        acompanha todas as suas vendas na nossa dashboard.</p>
+
+                    <a href="#budget" class="main-button btn-orange" title="Aumente suas vendas">Aumente suas vendas</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    </div>
+
+</section>
+
+<section class="buy section-padding  overflow-hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content">
+                    <div class="line-title bg-line-white"></div>
+                    <h1 class="main-title-mobile main-title-desktop">Para quem já vende <br> online ou quer começar</h1>
+                    <p>Nosso checkout transparente é compatível com as principais plataformas de e-commerce, assim você
+                        tem mais facilidade na hora de habilitar o recebimento no seu site ou app sem precisar de
+                        conhecimento técnico.</p>
+                    <a href="#budget" class="main-button btn-white" title="Aumente suas vendas">Aumente suas vendas</a>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+</section>
+
+<section class="products section-padding overflow-hidden" id="best-items">
+    <div class="container">
+        <div class="col-md-12 text-center" data-aos="fade-up">
+            <h1 class="main-title-mobile main-title-desktop">Nossas Soluções</h1>
+            <div class="line-title bg-line-orange"></div>
+        </div>
+        <div class="d-flex align-items-center flex-wrap h-100">
+            <div class="swiper-container container swiper-container-products">
+                <div class="swiper-wrapper">
+                    {{#home}}{{#each carousel-items}}
+                    <div class="swiper-slide">
+                        <!-- Adicionando col-md-4 ao redor do swiper-slide -->
+                        <div class="col-md-4">
+                            <div class="column-card" data-aos="fade-up">
+                                <div class="card-product">
+                                    <div class="card-icon">
+                                        <img class="mb-20" src="/assets/images/{{{imagem}}}" alt="">
+                                    </div>
+                                    <div class="content-header text-center">
+                                        <h5 class="sub-title">{{{title}}}</h5>
+                                    </div>
+                                    <div class="card-content-text">
+                                        <p>{{{description}}}</p>
+                                    </div>
+                                    <a href="#budget" class="main-button btn-white" title="Aumente suas vendas">{{{link}}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}{{/home}}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="budget section-padding  overflow-hidden" id="budget">
+    <div class="container">
+        <div class="col-md-12 text-center" data-aos="fade-down">
+            <div class="mb-20">
+                <h1 class="main-title-mobile main-title-desktop">Contato</h1>
+                <div class="line-title bg-line-orange"></div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center flex-wrap flex-md-nowrap">
+            <div class="col-md-6" data-aos="fade-right">
+                <img class="img-fluid mb-20" src="/assets/images/conexoes-card.svg" alt="guarda-chuva personalizado">
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="col-budget-speed">
+                    <h3>Orçamento Rápido</h3>
+                    <p>Preencha os campos abaixo que <br> responderemos seu orçamento em poucas horas</p>
+                </div>
+                <form action="inc/modules/send.php" method="POST" id="sendForm">
+                    <fieldset>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="nome" placeholder="Seu Nome">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="whatsapp" id="whatsapp"
+                                placeholder="WhatsApp com DDD">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto">
+                        </div>
+                        <div class="col-button">
+                            <input type="submit" class="main-button btn-orange" value="Pedir Orçamento">
+                        </div>
+                    </fieldset>
+                    <div class="sucess">
+                        <h2>Parabéns</h2>
+                        <p>O seus e-mail foi enviado com sucesso</p>
+                        <p>Aguarde o nosso contato.<br> Obrigado! Equipe Personalizante.</p>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

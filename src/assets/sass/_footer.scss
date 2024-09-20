@@ -1,0 +1,198 @@
+.footer-area {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+
+    .widget-about {
+        margin-bottom: 20px;
+        img {
+            margin-bottom: 20px;
+            max-width: 200px;
+        }
+    }
+
+    .footer-menu{
+        margin-top: 20px;
+    }
+
+    .social{
+        justify-content: center;
+    }
+
+    .whatsapp-button {
+        bottom: 100px !important;
+    }
+
+    .col-md-3, .col-md-4 {
+        h4 {
+            font-size: 24px;
+            color: $white;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            color: $white;
+            font-size: 14px;
+            line-height: 30px;
+        }
+    }
+
+    .footer-menu {
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            li {
+                font-size: 16px;
+                color: $white;
+                margin-bottom: 10px;
+
+                a {
+                    font-size: 16px;
+                    color: $white;
+                    font-weight: 300;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+
+    .scrollTop {
+        display: none;
+        cursor: pointer;
+
+        .arrow-top {
+            background-image: url(/assets/images/up-top.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            display: block;
+        }
+    }
+
+    .float-bot {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        transition: 0.4s;
+
+        &-simulation {
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            transition: 0.6s;
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+            h5 {
+                font-size: 16px;
+                font-weight: 800;
+                color: $white;
+            }
+
+            cursor: pointer;
+            padding: 20px;
+        }
+    }
+}
+
+@media (min-width: $mobile) {
+    .footer-area {
+        text-align: left;
+
+        .widget-about {
+            img {
+                margin-bottom: 20px;
+                max-width: 100%
+            }
+        }
+
+        .whatsapp-button {
+            bottom: 100px !important;
+        }
+
+        .social{
+            justify-content: flex-start;
+        }
+
+        .col-md-3, .col-md-4 {
+            h4 {
+                font-size: 24px;
+                color: $white;
+                font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                color: $white;
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
+
+        .footer-menu {
+            h4 {
+                margin-bottom: 20px;
+            }
+
+            ul {
+                li {
+                    font-size: 16px;
+                    color: $white;
+                    margin-bottom: 10px;
+
+                    a {
+                        font-size: 16px;
+                        color: $white;
+                        font-weight: 300;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+
+        .scrollTop {
+            display: block;
+            border-radius: 100%;
+            z-index: 20;
+            border: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            transition: background-color .3s, opacity .5s, visibility .5s;
+            visibility: hidden;
+            z-index: 1000;
+            background-color: $orange-000;
+            right: 20px;
+            bottom: 20px;
+            padding: 10px;
+            transition: all .4s ease-in-out 0s;
+        }
+
+        .scrollTop:active {
+            background-color: #555;
+        }
+
+        .scrollTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .float-bot {
+            &-simulation {
+                display: none;
+            }
+        }
+
+        .copyright-text {
+            p {
+                color: $white;
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
+    }
+}

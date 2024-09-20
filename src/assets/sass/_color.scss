@@ -1,0 +1,45 @@
+// color
+$white:  #ffffff;
+$gray-000: #3f3f3f;
+$black: #000000;
+$blue-000: #1f3447;
+$green-000: #33a83f;
+$orange-000: #ff6600;
+$red-000: #c60039;
+
+.bg-gray-000 {
+  background-color: $gray-000;
+}
+
+.bg-white{
+  background-color: $white;
+}
+.bg-orange-000{
+  background-color: $orange-000;
+}
+
+.bg-blue-000 {
+  background-color: $blue-000;
+}
+
+
+.bg-red-000{
+  background-color: $red-000;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.text-blue-000 {
+  color: $blue-000;
+}
+
+.text-gray-000 {
+  color: $gray-000;
+}
+
+.text-red-000{
+  color: $red-000!important;
+}
+

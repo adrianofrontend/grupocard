@@ -1,0 +1,69 @@
+{
+  "home": {
+    "partners-items": [
+      {
+        "imagem": "logo-claro.svg",
+        "alt": "Cliente claro",
+        "width": "183",
+        "height": "56"
+      },
+      {
+        "imagem": "logo-office.svg",
+        "alt": "Cliente Office",
+        "width": "237",
+        "height": "118"
+      },
+      {
+        "imagem": "logo-havaianas.svg",
+        "alt": "Cliente Havaianas",
+        "width": "259",
+        "height": "152"
+      },
+      {
+        "imagem": "logo-bilhete-unico.svg",
+        "alt": "Cliente Bilhete Único",
+        "width": "193",
+        "height": "48"
+      },
+      {
+        "imagem": "logo-netflix.svg",
+        "alt": "Parceiro Super Digital",
+        "width": "225",
+        "height": "176"
+      },
+      {
+        "imagem": "logo-ifood.svg",
+        "alt": "Cliente Ifood",
+        "width": "225",
+        "height": "176"
+      },
+      {
+        "imagem": "logo-playstation.svg",
+        "alt": "Cliente Playstation",
+        "width": "225",
+        "height": "176"
+      }
+    ],
+    "carousel-items": [
+      {
+        "imagem": "foguete.png",
+        "title": "Para negócios diversos",
+        "description": "Para Fintechs, Bancos, Plataformas Digitais e Redes Físicas (grande varejo), Trazendo   Soluções com a configuração de acordo com a necessidade do seu negócio.",
+        "link": "Aumente suas vendas"
+      },
+      {
+        "imagem": "carrinho.png",
+        "title": "Aumente seu leque de produtos",
+        "description": "Com o CardHub, você paga contas, recarrega celular e transporte, e conta com ferramentas de    venda para pequenos negócios.",
+        "link": "Aumente suas vendas"
+      },
+      {
+        "imagem": "cliente.png",
+        "title": "Alcance mais clientes",
+        "description": "Tenha seu produto disponível em todo o Brasil, com mais de 90 mil pontos de venda físicos e   diversas plataformas online dos parceiros Card, ampliando seu alcance e potencial de vendas",
+        "link": "Aumente suas vendas"
+      }
+    ],
+    "hold": []
+  }
+}
