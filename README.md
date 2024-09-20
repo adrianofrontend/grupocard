@@ -1,5 +1,4 @@
-
-COTAI LANDING PAGE
+GRUPO CARD LANDING PAGE
 
 ## Installation
 NPM install
@@ -12,8 +11,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## RUN 
 
-NPM run build:dev - To deploy on dev.cotai.com.br
-NPM run build:prod - To deploy on cotai.com.br
+NPM run build:dev - To deploy on dev.grupocard.com.br
+NPM run build:prod - To deploy on grupocard.com.br
 NPM run dev - To run the project on Localhost after the installation
 OBS:Assim que o comando npm run dev é executado ele cria a pasta public
 OBS2: No arquivo Gruntfile.js é onde se cria as rotas,  para a LP institucional basta acessar/lp/cotai
